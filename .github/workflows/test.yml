@@ -1,4 +1,4 @@
-name: Test
+name: Tests
 'on':
   push:
     - main
@@ -21,9 +21,9 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys:  |
+          restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-
-      - name: Instalando dependencias
+      - name: Instalando Dependencias
         run: npm install
       - name: Ejecuta los test de nuestro proyecto
         run: npm run test
