@@ -1,7 +1,8 @@
 name: Tests
 on:
   push:
-    - main
+    branches:
+      - main
 jobs:
   test:
     name: 'Nodejs v${{ matrix.node }}'
