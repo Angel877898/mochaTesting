@@ -26,5 +26,7 @@ jobs:
             ${{ runner.os }}-node-v${{ matrix.node }}-
       - name: Instalando Dependencias
         run: npm install
+      - name: Instalando Dependencias
+        run: npm install mocha
       - name: Ejecuta los test de nuestro proyecto
         run: npm run test
