@@ -1,8 +1,8 @@
 name: Tests
-on:
+'on':
   push:
-    branches: [ main ]
-
+    branches:
+      - main
 jobs:
   test:
     name: 'Nodejs v${{ matrix.node }}'
@@ -24,8 +24,6 @@ jobs:
           key: ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-
-      - name: Install mocha
-        run: npm install -g mocha
       - name: Instalando Dependencias
         run: npm install
       - name: Ejecuta los test de nuestro proyecto
